@@ -1,0 +1,43 @@
+.login {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.login h4 {
+  margin-bottom: 20px;
+}
+
+.login input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.login button {
+  width: 109%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login button:hover {
+  background-color: #0056b3;
+}
+
+.login p {
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .login {
+    max-width: 300px;
+  }
+}

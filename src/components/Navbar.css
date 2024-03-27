@@ -1,0 +1,112 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+}
+
+.logo {
+  font-size: 16px;
+  color: black;
+}
+.logo:hover {
+  color: blue;
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.search input {
+  width: 300px;
+  padding: 0.5rem;
+  border-radius: 20px;
+}
+.search p {
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.auth a {
+  color: black;
+  text-decoration: none;
+}
+.auth a:hover {
+  color: blue;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 10px;
+    margin-left: -15px;
+    margin-right: 2px;
+  }
+  .search p {
+    margin-left: 3px;
+    margin-right: 3px;
+  }
+  .search input[type="text"] {
+    width: 90px;
+  }
+}
+.profile-dropdown {
+  position: relative;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.avatar p {
+  margin: 0;
+  background-color: #666;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.dropdown-content {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.6);
+  border-radius: 4px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content p,
+.dropdown-content .button {
+  text-align: center;
+  padding: 10px;
+}
+
+.dropdown-content .button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: -13%;
+  font-size: 14px;
+}
+
+.dropdown-content .button:hover {
+  background-color: rgb(89, 89, 243);
+  color: white;
+  border-radius: 5px;
+}

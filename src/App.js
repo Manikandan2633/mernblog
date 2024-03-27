@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PostDetails from './pages/PostDetails';
+import CreatePost from './pages/CreatePost';
+import EditPost from './pages/EditPost';
+import Profile from './pages/Profile';
+import { UserContextProvider } from './context/UserContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider className="app">
+      <Navbar />
+      <Routes>
+        <Route index element={<Home />}/>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/register' element={<Register />}/>
+        <Route path='/write' element={<CreatePost />}/>
+        <Route path='/posts/post/:id' element={<PostDetails />}/>
+        <Route path='/edit/:id' element={<EditPost />}/>
+      </Routes>
+      <Footer /> 
+    </UserContextProvider>
   );
 }
 
